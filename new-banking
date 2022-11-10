@@ -16,10 +16,10 @@ using namespace std;
     /* FUNCTION DEFINITION */
 
     bool Validitycheck(char ip[16], string email, int num);
-    void DepositMoney(int intialbalance);
-    void withdraw(int intialbalance);
-    void displaymyBalance();
-    void Transfer_money ();
+    void DepositMoney(int initialbalance);
+    void withdraw(int initialbalance);
+    void displaymyBalance(int initialbalance);
+    void Transfer_money (int initialbalance);
     void ChangemyDetails();
     bool IPCheck(char str []);
     bool EmailCheck(string email);
@@ -33,7 +33,7 @@ using namespace std;
 // Main Program
 int main()
 {
-    int intialbalance=10000;
+    int initialbalance=10000;
     cout << "\t **************** WELCOME MR C++ EXPERT TO MY BANKING APPLICATION ******************* \n";
     cout<< endl;
 
@@ -91,15 +91,17 @@ int main()
             {
                 if (input=="W" || input=="w"){
                         cout<<"Calling Withdraw Option";
-                        withdraw(intialbalance);
+                        withdraw(initialbalance);
                         t=false;
                 }
                 else if (input=="D" || input=="d"){
                     cout << "Deposit";
+                    DepositMoney(initialbalance);
                     t=false;
                 }
                 else if (input=="B" || input=="b"){
                      cout << "Display Balance";
+                     displaymyBalance(initialbalance);
                      t=false;
                 }
                 else if (input=="T" || input=="t")
@@ -108,8 +110,8 @@ int main()
                     int transfer;
                     cout<<"How much to transfer"<<endl;
                     cin>>transfer;
-                    intialbalance=intialbalance-transfer;
-                    cout<<"your remains are:"<< intialbalance;
+                    initialbalance=initialbalance-transfer;
+                    cout<<"your remains are:"<< initialbalance;
                      t=false;
                  }
                 else if (input=="C" || input=="c"){
@@ -180,15 +182,15 @@ int main()
 
 
      // Function for Deposit
-    void DepositMoney(int intialbalance)
+    void DepositMoney(int initialbalance)
     {
         int deposit;
         cout<<"How much you want to deposit"<<endl;
         cin>>deposit;
         if (deposit>0)
         {
-            intialbalance=intialbalance+deposit;
-            cout<< "Your new balance is" << intialbalance;
+            initialbalance=initialbalance+deposit;
+            cout<< "Your new balance is" << initialbalance;
         }
 
     // Get how much user want to deposit and display balance after adding
@@ -336,4 +338,4 @@ int main()
     {return false;
     }
     }
-    
+    // Any other Function. Do not forget to declare it as well
