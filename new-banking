@@ -1,4 +1,4 @@
-// CPP Program to demonstrate main() with
+e main() with
 // return type
 #include <iostream>
 #include <string>
@@ -255,6 +255,39 @@ int main()
 
     void ChangemyDetails(int initialbalance)
     {
+        cout <<"-----Provide your new IP address, email and user ID------" << endl;
+        char ipaddress[16];
+
+        string new_email;
+        int new_id;
+
+        cout << "\t ---- Enter your new IP address:";
+        cin.ignore();
+        cin.getline(ipaddress, 16);
+        cout << endl;
+
+        cout << "\t ---- Enter your new email address:";
+        cin.new_email;
+        cout << endl;
+
+        cout << "\t ---- Enter your new ID:";
+        cin.new_id
+        cout << endl;
+
+
+
+        bool updated_details == Validitycheck(ipaddress, new_email, new_id);
+        if (updated_details == true)
+            cout<<"Here are your new details:" <<endl;
+            cout<<new_ipaddress<<endl;
+            cout<<new_email<<endl;
+            cout<<new_id<<endl;
+
+    }
+    else{
+
+        cout<<"Please enter your details again"<<endl;
+    }
 
     }
 
@@ -304,4 +337,3 @@ int main()
     {return false;
     }
     }
-    // Any other Function. Do not forget to declare it as well
